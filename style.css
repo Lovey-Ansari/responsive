@@ -1,0 +1,291 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+@font-face {
+	font-family: abc;
+	src: url("custom.ttf");
+}
+@font-face {
+	font-family: custom2;
+	src: url("custom2.ttf");
+}
+.scaleTransition {
+	transition: 300ms;
+}
+.scaleTransition:hover {
+	transform: scale(1.3);
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+}
+
+.leftNav {
+	background-color: black;
+	height: 100vh;
+	width: 60px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 10px;
+	text-decoration: none;
+	position: sticky;
+	color: rgb(252, 227, 115);
+	font-size: 30px;
+	align-items: center;
+	position: fixed;
+	z-index: 99;
+}
+
+.navMobile {
+	display: none;
+}
+
+.leftNav > * {
+	margin-top: 28px;
+	/* font-weight: 400; */
+}
+.content {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-left: 70px;
+}
+.menu {
+	background-color: rgb(252, 227, 115);
+	width: 70px;
+	height: 70px;
+	color: black;
+	font-size: 40px;
+	border: 5px solid black;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 300ms;
+}
+.menu:hover {
+	transform: scale(1.1);
+}
+
+.contentSection1 {
+	background-color: #fce373;
+	/* border: 2px solid rgb(218, 150, 3); */
+	height: 484px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	position: relative;
+}
+.contentSection1 a {
+	text-decoration: none;
+}
+
+.contentSection1 a.name {
+	padding-top: 32px;
+}
+
+.welcome {
+	font-family: abc;
+	font-size: 13vw;
+	color: #231f20;
+}
+
+.container3 {
+	/* border: 2px solid black; */
+	width: 260px;
+	font-size: 19px;
+	height: 50px;
+	background-color: #231f20;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.name {
+	font-family: custom2;
+	font-size: 40px;
+	color: #231f20;
+}
+.name div {
+	margin-top: -15px;
+}
+.text {
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	font-size: 25px;
+	font-weight: light;
+	color: #231f20;
+	margin-top: -40px;
+	/* position: absolute;
+	left: 37%;
+	bottom: 64%; */
+}
+.buyTickets {
+	color: #fce373;
+	transition: 200ms;
+	will-change: transform;
+}
+.arrow {
+	margin-right: 25px;
+}
+
+.buyTickets:hover {
+	transform: scale(1.1);
+}
+
+.exhibition {
+	position: absolute;
+	bottom: -50px;
+	right: 48%;
+	background-color: #fce373;
+}
+.exhibition .buyTickets {
+	color: #231f20;
+}
+.contentSection2 {
+	width: 100%;
+}
+
+.contentSection2 {
+	background-color: #cca69a;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 100px 0px;
+}
+
+.imgCont1,
+.imgCont2 {
+	background-color: #9cd08e;
+	height: 550px;
+	padding: 24px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+
+.imgCont1 img {
+	height: 420px;
+	width: 420px;
+	object-fit: cover;
+	user-select: none;
+}
+
+.imgCont2 img {
+	height: 420px;
+	width: 420px;
+	object-fit: cover;
+	object-position: top;
+	user-select: none;
+}
+
+.date {
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	margin-top: 55px;
+	letter-spacing: 2px;
+}
+.imgCont1 a,
+.imgCont2 a {
+	color: #231f20;
+	text-decoration: none;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	position: absolute;
+	bottom: -17px;
+	font-size: 30px;
+	transform: scaleX(1.2);
+	font-weight: lighter;
+}
+
+.ticketCont {
+	font-size: 25px;
+	color: #9cd08e;
+	border-radius: 50%;
+	background-color: #231f20;
+	/* width: 45px;
+	height: 35px; */
+	padding: 11px;
+	transition: transform 250ms;
+	transform: rotateZ(135deg);
+	position: absolute;
+	bottom: -20px;
+	right: -20px;
+}
+.ticketCont:hover {
+	transform: rotateZ(315deg);
+}
+.ticketCont i {
+	position: relative;
+	top: 2px;
+}
+
+/* for mobile */
+@media only screen and (max-width: 412px) {
+	.container {
+		width: 100%;
+	}
+
+	.leftNav {
+		display: none;
+	}
+
+	.navMobile {
+		box-sizing: border-box;
+		width: 100%;
+		height: 50px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		color: rgb(252, 227, 115);
+		font-size: 20px;
+		background-color: black;
+		z-index: 99;
+	}
+
+	.content {
+		margin: 0;
+		width: 100%;
+		height: 50%;
+		position: relative;
+	}
+
+	.container3 {
+		width: 300px;
+	}
+
+	.exhibition {
+		width: 300px;
+		position: absolute;
+		left: 56px;
+	}
+
+	.contentSection2 {
+		width: 100%;
+		height: 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.contentSection2 img {
+		height: 150px;
+		width: 200px;
+	}
+
+	.imgCont1 {
+		height: 250px;
+	}
+
+	.imgCont2 {
+		margin-top: 50px;
+		height: 250px;
+	}
+}
